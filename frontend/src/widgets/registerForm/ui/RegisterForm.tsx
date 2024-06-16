@@ -30,7 +30,7 @@ const RegisterForm = () => {
 
     try {
       console.log("Нажали на кнопку")
-      const response = await axios.post('http://localhost:8000/api/v1/users/', data);
+      const response = await axios.post('http://80.78.242.175:8000/api/v1/users/', data);
       // console.log(response)
 
       setError('')

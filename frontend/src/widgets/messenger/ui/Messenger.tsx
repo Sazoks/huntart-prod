@@ -85,7 +85,7 @@ export const Messenger = () => {
   useEffect(() => {
     const fetchInterlocutor = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/users/${userId}/`);
+        const response = await axios.get(`http://80.78.242.175:8000/api/v1/users/${userId}/`);
         setInterlocutor({
           id: response.data.id,
           username: response.data.username,

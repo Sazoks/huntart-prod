@@ -3,7 +3,7 @@ import { redirect } from "react-router-dom";
 import useWebSocket from "react-use-websocket";
 import { logout } from "../../app/model/slices/authSlice";
 
-export const SOCKET_URL = "ws://localhost:8000/ws/";
+export const SOCKET_URL = "ws://80.78.242.175:8000/ws/";
 
 export const useChatWebsocket = () => {
 

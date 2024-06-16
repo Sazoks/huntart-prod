@@ -3,7 +3,7 @@ import axios from "axios";
 import { logout } from "../../app/model/slices/authSlice";
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000/api/v1',
+  baseURL: 'http://80.78.242.175:8000/api/v1',
 });
 
 // Add a request interceptor
@@ -28,7 +28,7 @@ instance.interceptors.response.use(
 
       try {
         const refreshToken = localStorage.getItem('refreshToken');
-        const response = await axios.post('http://localhost:8000/api/v1/users/token/refresh/', { refresh: refreshToken });
+        const response = await axios.post('http://80.78.242.175:8000/api/v1/users/token/refresh/', { refresh: refreshToken });
         const { access } = response.data;
 
         localStorage.setItem('token', access);

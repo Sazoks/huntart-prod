@@ -31,7 +31,7 @@ const AuthForm = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/users/token/', data);
+      const response = await axios.post('http://80.78.242.175:8000/api/v1/users/token/', data);
       const { access: token, refresh: refreshToken } = response.data;
       sendJsonMessage({
         "subsystem": "auth",
