@@ -1,0 +1,45 @@
+@import "../../../shared/index.scss";
+
+.header {
+  &__hat {
+    overflow: hidden;
+    position: relative;
+    min-width: $min-width;
+    width: 100vw;
+  
+    &::before {
+      @extend %base-elem-styles;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: $header-height-sm;
+      z-index: 4;
+    }
+  }
+
+  &__container {
+    padding: 0 10px;
+  }
+
+  &__body {
+    @extend %flex-row-container;
+    height: $header-height-sm;
+  }
+
+  &__logo {
+    @extend %link;
+    font-size: $fz-logo;
+    font-weight: 700;
+
+    position: relative;
+    z-index: 4;
+
+    @media (min-width: 1024px) {
+      & {
+        font-size: $fz-logo-lg;
+      }
+    }
+  }
+}

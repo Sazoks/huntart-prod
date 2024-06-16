@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.messanger-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  margin-top: 20px;
+  justify-content: center;
+  // padding-top: 100px;
+  gap: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.interlocutors-list-block {
+  overflow-y: auto;
+
+  @extend %base-elem-styles;
+  @extend %shadow-filter;
+
+  position: relative;
+
+  height: 85vh;
+  min-width: 320px;
+  width: 360px;
+
+  @media (max-width: 600px) {
+    height: 143px;
+    width: 100%;
+  }
+}
+
+.input-wrapper{
+  position: sticky;
+  top: 0;
+
+  padding: 10px 5px;
+  border: 1px solid $clr-border;
+  background-color: $base-bg-clr;
+
+  height: 60px;
+}

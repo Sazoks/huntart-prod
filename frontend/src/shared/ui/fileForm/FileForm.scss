@@ -1,0 +1,29 @@
+@import "../../../shared/index.scss";
+
+.file-form {
+  text-align: left;
+  min-width: 320px;
+  margin-bottom: 26px;
+
+  &__header {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  &__file-picker {
+    @extend %flex-row-container;
+    gap: 10px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    justify-content: start;
+  }
+
+  &__submit-btn {
+    @extend %text-btn;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-weight: 600;
+  }
+}

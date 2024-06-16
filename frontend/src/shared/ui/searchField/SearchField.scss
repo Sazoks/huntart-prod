@@ -1,0 +1,10 @@
+@import "../../index.scss";
+
+.search__field {
+  position: relative;
+  width: 100%;
+  // min-width: 200px;
+  // flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}

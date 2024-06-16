@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+header {
+  position: fixed;
+  background-color: $base-bg-clr;
+  z-index: 2;
+}
+
+main {
+  padding-top: 150px;
+  // overflow-y: scroll;
+  @media (max-width: 480px) {
+    padding-top: 234px;
+  }
+}

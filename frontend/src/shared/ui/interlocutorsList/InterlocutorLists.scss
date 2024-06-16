@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.interlocutors-list{
+  overflow-y: auto;
+  // padding: 200px;
+  // background-color: #cfd688;
+}
+
+.interlocutor {
+  list-style-type: none;
+  border: 1px solid $clr-border;
+
+  &:hover {
+    background-color: $clr-gray;
+  }
+  &:focus, &:focus-visible, &:active {
+    background-color: $clr-green;
+  }
+
+  &--active {
+    background-color: $clr-gray;
+  }
+}

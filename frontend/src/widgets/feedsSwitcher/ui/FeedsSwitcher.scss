@@ -1,0 +1,26 @@
+@import "../../../shared/index.scss";
+
+.switcher {
+  @extend %flex-row-container;
+  width: 100vw;
+}
+
+.swither__feed-btn {
+  @extend %btn;
+  min-width: 120px;
+  width: calc(100% / 3);
+  min-height: $feeds-switcher-height;
+  font-size: 14px;
+
+  &.active {
+    background-color: $clr-green;
+  }
+
+  &.active:hover {
+    background-color: $clr-dirty-green;
+  }
+}
+
+.swither__feed-btn--not-auth {
+  width: calc(100% / 2);
+}

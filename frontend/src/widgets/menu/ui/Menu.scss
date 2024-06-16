@@ -1,0 +1,119 @@
+@import "../../../shared/index.scss";
+
+.header__list {
+  display: flex;
+
+  & li {
+    margin-right: 20px;
+  }
+}
+
+.header__link {
+  @extend %link;
+  font-size: 18px;
+  font-weight: 700;
+
+  @media (min-width: 1024px) {
+    & {
+      font-size: 20px;
+    }
+  }
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__menu {
+  z-index: 4; //!
+}
+
+@media (max-width: 768px) {
+
+  .header__burger {
+    display: block;
+    position: relative;
+    z-index: 40;
+    width: 35px;
+    height: 25px;
+
+    & span {
+      position: absolute;
+      background-color: #000;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      top: 10.5px;
+      border-radius: 20%;
+    }
+
+    &::before, &::after {
+      content: '';
+      background-color: #000;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 20%;
+      left: 0;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }  
+
+    &.active::before {
+      transform: rotate(-45deg);
+      top: 10.5px;
+      transition: all 0.3s ease 0s;
+    }
+    &.active::after {
+      transform: rotate(-45deg);
+      bottom: 10.5px;
+      transition: all 0.3s ease 0s;
+    }
+    &.active span {
+      display: none;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  .header__burger.active::before {
+    transform: rotate(45deg);
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 65px 5px 10px 5px;
+    border: 2px solid $clr-border;
+    background: $base-bg-clr;
+    overflow: auto;
+    z-index: 3; //!
+
+    &.active {
+      top: 0;
+      transition: all 0.4s ease 0s;
+    }
+  }
+
+  .header__list {
+    display: block;
+
+    & li {
+      margin-left: 0px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .header__link {
+      font-size: 20px;
+    }
+}

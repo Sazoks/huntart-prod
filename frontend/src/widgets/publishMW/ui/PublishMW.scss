@@ -1,0 +1,57 @@
+@import "../../../shared/index.scss";
+
+.publish-form {
+  // align-items: center;
+  text-align: left;
+  min-width: 320px;
+
+  &__file-picker, &__sale-check {
+    @extend %flex-row-container;
+    gap: 10px;
+    margin-top: 16px;
+    justify-content: start;
+  }
+
+  &__tags-input {
+    margin-top: 16px;
+    // margin-bottom: 26px;
+    @extend %base-elem-styles;
+    border-radius: 50px;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 12px;
+  
+    &::placeholder {
+      font-size: 16px;
+      line-height: normal;
+      // color: $clr-dark-gray;
+    }
+  }
+}
+
+.alert-msg {
+  margin-top: 0;
+  color: rgb(167, 24, 24);
+  font-size: 14px;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.pick-file-btn, .submit-btn {
+  @extend %text-btn;
+  display: block;
+}
+
+.submit-btn {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 26px;
+}

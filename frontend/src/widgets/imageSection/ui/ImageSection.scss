@@ -1,0 +1,220 @@
+@import "../../../shared/index.scss";
+
+// .modal__img-section {
+//   // text-align: center;
+//   // position: relative;
+//   // flex-grow: 2;
+//   // flex: 250px 2 1;
+  
+//   height: 500px;
+  
+// }
+
+// .modal__username {
+//   @extend %link;
+//   text-align: left;
+//   font-size: 22px;
+//   margin-bottom: 12px;
+// }
+
+// .modal__img-wrapper {
+//   // width: 100%;
+//   height: 100%;
+//   // vertical-align: top
+//   // vertical-align: top;
+//   // // height: 500px;
+//   // // position: relative;
+//   // // flex: auto;
+//   // // height: 250px;
+//   // // min-width: 200px;
+//   // max-width: 480px;
+//   // // min-width: 300px;
+//   max-width: 940px;
+//   max-height: 450px;
+//   // // width: auto;
+//   // height: auto;
+  
+//   background-color: #c4cca0;
+//   // max-height: 70vh;
+  
+//   filter: drop-shadow(0 0 4px #a4a2a2ce);
+// }
+
+// .modal__img {
+//   width: 100%;
+//   height: 100%;
+//   -o-object-fit: contain;
+//   object-fit: contain;
+//   -o-object-position: center;
+//   object-position: center;
+// }
+
+// .modal__btns-container {
+//   // position: relative;
+//   display: flex;
+//   gap: 8px;
+//   margin: -14px 0 0 -14px;
+//   // z-index: 1;
+// }
+
+// .modal__subscribe-btn {
+//   @extend %text-btn;
+// }
+
+// .modal__like-btn {
+//   @extend %icon-btn;
+// }
+// .modal__like-icon {
+//   @extend %icon;
+// }
+
+
+// .modal__tags {
+//   margin-top: 10px;
+//   text-align: left;
+  
+// }
+
+// @media (min-width: 820px) {
+//   .modal__img-section {
+//     // padding-top: 70px;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // max-height: 500px;
+//     // margin-bottom: 0px;
+//     // display: inline-block;
+//   }
+
+//   .modal__username {
+//     // padding-left: 18px;
+//   }
+
+//   .modal__img-block {
+//     // display: inline-block;
+    
+//   }
+
+//   .modal__img-wrapper {
+//     // height: 450px;
+//   }
+// }
+
+.modal__img-section {
+  text-align: center;
+  min-width: 320px;
+  flex-basis: 320px;
+  flex-grow: 3;
+  // padding-top: 8px;
+  // margin-bottom: 12px;
+  // flex: 320px 2;
+}
+
+.modal__img-username-container {
+  @extend %flex-row-container;
+  align-items: center;
+  gap: 12px;
+  // margin-top: 6px;
+  // margin-bottom: 14px;
+}
+
+.modal__username {
+  @extend %link;
+  text-align: left;
+  font-size: 22px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  // vertical-align: top;
+}
+
+.modal__img-wrapper {
+  height: auto;  
+  min-width: 200px;
+  max-width: 940px;
+  filter: drop-shadow(0 0 4px #a4a2a2ce);
+}
+
+.modal__img {
+  width: 100%;
+  height: 100%;
+  max-height: 70vh;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.modal__btns-container {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  // margin: -38px 0 -12px 0;
+  
+  // margin: -38px 0 0 -12px;
+  // padding: 6px 0;
+  // z-index: 1;
+}
+
+.modal__like-btn {
+  // @extend %icon-btn;
+  @extend %text-btn;
+}
+
+.modal__views {
+  // @extend %base-elem-styles;
+  // display:inline;
+  // background-color: #e1dfdf;
+  // text-align: center;
+  border-radius: 50px;
+  padding: 7px 6px 0 0;
+  // height: 40px;
+  font-size: 16px;
+  // z-index: 1;
+  // margin: auto;
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+.modal__like-icon {
+  // @extend %icon;
+  &--liked {
+    color: rgb(228, 73, 73);
+  }
+}
+
+.modal__subscribe-btn {
+  @extend %text-btn;
+}
+
+// .modal__tags {
+//   // position: relative;
+//   margin-top: 24px;
+//   text-align: left;
+//   margin-bottom: 10px;
+//   max-width: 400px;
+// }
+
+@media (min-width: 820px) {
+  .modal__img-section {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    max-height: 500px;
+  }
+
+  .modal__username {
+    // padding-left: 18px;
+  }
+
+  .modal__img-block {
+    // display: inline-block;
+  }
+
+  .modal__img-wrapper {
+    height: 450px;
+  }
+}

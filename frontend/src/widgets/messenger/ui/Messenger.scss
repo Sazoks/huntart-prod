@@ -1,0 +1,20 @@
+@import "../../../index.scss";
+
+.messenger {
+  height: 85vh;
+  // background-color: rgb(204, 129, 129);
+  display: flex;
+  flex-direction: column;
+  // align-content: stretch;
+  width: 840px;
+
+  @media (max-width: 600px) {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.chat {
+  // background-color: rgb(183, 226, 159);
+  flex-grow: 1;
+}

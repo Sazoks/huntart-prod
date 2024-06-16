@@ -1,0 +1,152 @@
+@import "../../../shared/index.scss";
+
+.filters-field {
+  position: static;
+  width: 100%;
+  z-index: 1;
+
+  &__form {
+    // flex-basis: 50%;
+    // flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+
+    @media (max-width: 480px) {
+      // flex-wrap: wrap;
+      margin-top: 36px;
+    }
+  }
+
+  &__tags-input {
+    // min-width: 100px;
+    @extend %base-elem-styles;
+    width: 100%;
+    // width: calc(100% - 190px);
+    border-radius: 50px;
+    font-size: 16px;
+    height: $search-height-sm;
+    padding: 0 24px;
+    // flex-basis: 50%;
+  // flex-grow: 2;
+  // flex-shrink: 1;
+    margin-top: 36px;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: normal;
+      color: $clr-dark-gray;
+    }
+    &:hover {
+      cursor: text;
+    }
+    &:focus-visible, &:active {
+      border-color: $clr-dark-gray;
+    }
+    &:disabled {
+      background-color: $clr-light-gray;
+      &::placeholder {
+        color: $clr-disabled;
+      }  
+    }
+
+    @media (min-width: 480px) {
+
+      & {
+        margin-top: 0px;
+      }
+    }
+
+    @media (min-width: 720px) {
+
+      & {
+        font-size: 18px;
+      }
+      &::placeholder {
+        font-size: 18px; 
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      & {
+        padding: 0 34px;
+        height: $search-height-md;
+        font-size: 20px;
+    
+        &::placeholder {
+          font-size: 20px;
+        }
+      }  
+    }
+  }
+
+  &__btn {
+    @extend %text-btn;
+
+    flex-basis: $search-height-sm;
+    flex-grow: 0;
+    flex-shrink: 0;
+    
+    height: $search-height-sm;
+    // width: $search-height-sm;
+
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      & {
+        flex-basis: $search-height-md;
+        height: $search-height-md;
+        // width: $search-height-md;
+        // font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      // flex-wrap: wrap;
+      // margin-top: 36px;
+    }
+  }
+}
+
+.filters-field__container {
+  @extend %flex-row-container;
+  gap: 10px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0 30px;
+  // justify-content: space-between;
+  align-items: flex-start;
+  // align-content: stretch;
+  flex-wrap: nowrap;
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+    // flex-direction: column;
+    // padding: 0 20px;
+  }
+}
+// .filter-btn {
+//   @extend %rounded-btn;
+
+//   flex-basis: $search-height-sm;
+//   flex-grow: 0;
+//   flex-shrink: 0;
+  
+//   height: $search-height-sm;
+//   width: $search-height-sm;
+
+//   text-align: center;
+
+//   @media (min-width: 1024px) {
+//     & {
+//       flex-basis: $search-height-md;
+//       height: $search-height-md;
+//       width: $search-height-md;
+//     }
+//   }
+// }
+
+// .filter-icon {
+//   @extend %icon;
+// }
